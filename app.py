@@ -46,7 +46,7 @@ def handle_message(event):
     try:
         # 呼叫 Gemini API 產生回覆
         response = gemini_client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-2.0-flash',
             contents=user_text,
         )
         ai_reply = response.text if response.text else "抱歉，我無法處理這則訊息。"
